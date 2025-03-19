@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
@@ -65,7 +64,7 @@ export default function Admin() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (editingPost) {
-      updateMutation.mutate({ ...editingPost, ...formData });
+      updateMutation.mutate({ ...formData, id: editingPost.id, createdAt: editingPost.createdAt });
     } else {
       createMutation.mutate(formData);
     }
@@ -85,7 +84,7 @@ export default function Admin() {
     <div className="min-h-screen bg-[#0E0E0E] py-32">
       <div className="container max-w-4xl">
         <h1 className="text-4xl font-bold mb-8">Blog Admin</h1>
-        
+
         <form onSubmit={handleSubmit} className="space-y-4 mb-8">
           <Input
             placeholder="Title"
