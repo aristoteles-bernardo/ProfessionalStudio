@@ -88,7 +88,13 @@ export default function Skills() {
             <div className="flex flex-wrap gap-4">
               {category.skills.map((skill) => (
                 <div key={skill.name} className="flex flex-col items-center gap-2 p-3 bg-card rounded-lg">
-                  <skill.icon className="w-8 h-8" />
+                  {skill.icon ? (
+                    <skill.icon className="w-8 h-8" />
+                  ) : (
+                    <span className="w-8 h-8 flex items-center justify-center text-xs font-medium">
+                      {skill.name.slice(0, 2).toUpperCase()}
+                    </span>
+                  )}
                   <span className="text-sm">{skill.name}</span>
                 </div>
               ))}
