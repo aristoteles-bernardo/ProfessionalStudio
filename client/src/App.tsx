@@ -5,17 +5,19 @@ import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Contact from "@/pages/Contact";
+import ProjectManagement from "@/pages/services/ProjectManagement";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 function Router() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-[#0E0E0E] text-foreground">
       <Navbar />
       <main className="pt-28">
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/contact" component={Contact} />
+          <Route path="/services/project-management" component={ProjectManagement} />
           <Route component={NotFound} />
         </Switch>
       </main>

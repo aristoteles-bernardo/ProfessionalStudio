@@ -6,23 +6,29 @@ const services = [
   {
     title: "Project & Product Management",
     description: "Expert project management services with a focus on IT and software development projects. Certified in Google Project Management and experienced in leading complex initiatives.",
-    icon: Briefcase
+    icon: Briefcase,
+    href: "/services/project-management",
+    buttonText: "About Project Management"
   },
   {
     title: "Business Intelligence & Data Analysis",
     description: "Comprehensive BI solutions using Power BI, Alteryx, and IBM Cognos Analytics. Expertise in data modeling, visualization, and predictive analytics.",
-    icon: LineChart
+    icon: LineChart,
+    href: "/services/business-intelligence",
+    buttonText: "About Business Intelligence"
   },
   {
     title: "Software Development",
     description: "Full-stack development services using modern technologies. Specialized in web applications, GIS solutions, and enterprise software development.",
-    icon: GitBranch
+    icon: GitBranch,
+    href: "/services/software-development",
+    buttonText: "About Development"
   }
 ];
 
 export default function Services() {
   return (
-    <section className="section-spacing bg-black/50">
+    <section className="section-spacing bg-[#0E0E0E]">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
