@@ -18,16 +18,16 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       <nav className="mx-4 my-4">
-        <div className="rounded-full border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container flex h-14 items-center justify-between">
+        <div className="rounded-lg bg-black/70 backdrop-blur-lg border border-white/10">
+          <div className="container flex h-16 items-center justify-between px-4">
             <Link href="/">
-              <a className="text-xl font-semibold tracking-tight">
+              <a className="text-xl font-semibold tracking-tight hover:text-primary transition-colors">
                 Aristoteles Bernardo
               </a>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex md:gap-6 items-center">
+            <div className="hidden md:flex md:gap-8 items-center">
               {navItems.map((item) => (
                 <Link key={item.href} href={item.href}>
                   <a 
@@ -39,7 +39,10 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link href="/contact">
-                <Button variant="outline" className="rounded-full bg-muted">
+                <Button 
+                  className="bg-white/90 text-black hover:bg-white rounded-full px-6"
+                  variant="ghost"
+                >
                   Let's Talk
                 </Button>
               </Link>
@@ -53,7 +56,7 @@ export default function Navbar() {
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-black/90 border-white/10">
                 <nav className="flex flex-col gap-4 mt-8">
                   {navItems.map((item) => (
                     <Link key={item.href} href={item.href}>
@@ -68,8 +71,8 @@ export default function Navbar() {
                   ))}
                   <Link href="/contact">
                     <Button 
-                      variant="outline" 
-                      className="w-full rounded-full bg-muted"
+                      className="w-full bg-white/90 text-black hover:bg-white rounded-full mt-4"
+                      variant="ghost"
                       onClick={() => setIsOpen(false)}
                     >
                       Let's Talk

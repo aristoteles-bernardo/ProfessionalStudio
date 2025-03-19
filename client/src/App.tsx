@@ -12,7 +12,7 @@ function Router() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <main className="pt-24">
+      <main className="pt-28">
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/contact" component={Contact} />
