@@ -11,6 +11,7 @@ import About from "@/pages/About";
 import Blog from "@/pages/Blog";
 import ProjectManagement from "@/pages/services/ProjectManagement";
 import DataAnalysis from "@/pages/services/DataAnalysis";
+import Development from "@/pages/services/Development";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
