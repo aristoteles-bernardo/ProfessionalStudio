@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import {
+import { 
   SiPython,
   SiR,
   SiJava,
@@ -10,10 +10,10 @@ import {
   SiDjango,
   SiFlask,
   SiPlotly,
-  SiApachehadoop,
+  SiApache,
   SiMicrosoftazure,
   SiGooglecloud,
-  SiAmazonaws,
+  SiAws,
   SiGit,
   SiGoogle,
   SiCisco,
@@ -41,7 +41,7 @@ const skillCategories = [
       { name: "Flask", icon: SiFlask },
       { name: "Dash", icon: SiPlotly },
       { name: "Kivy", icon: SiPython },
-      { name: "Apache Hadoop", icon: SiApachehadoop }
+      { name: "Apache Hadoop", icon: SiApache }
     ]
   },
   {
@@ -49,7 +49,7 @@ const skillCategories = [
     skills: [
       { name: "Microsoft Azure", icon: SiMicrosoftazure },
       { name: "Google Cloud", icon: SiGooglecloud },
-      { name: "AWS", icon: SiAmazonaws },
+      { name: "AWS", icon: SiAws },
       { name: "Power BI", icon: SiPowerbi },
       { name: "Git", icon: SiGit }
     ]
