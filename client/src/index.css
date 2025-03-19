@@ -4,32 +4,32 @@
 
 @layer base {
   :root {
-    --background: 0 0% 3.9%;
+    --background: 0 0% 5.5%;  /* #0E0E0E */
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 3.9%;
+    --card: 0 0% 5.5%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 3.9%;
+    --popover: 0 0% 5.5%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
+    --primary-foreground: 0 0% 5.5%;
 
-    --secondary: 0 0% 14.9%;
+    --secondary: 0 0% 9%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 14.9%;
+    --muted: 0 0% 9%;
     --muted-foreground: 0 0% 63.9%;
 
-    --accent: 0 0% 14.9%;
+    --accent: 0 0% 9%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
+    --border: 0 0% 9%;
+    --input: 0 0% 9%;
     --ring: 0 0% 83.9%;
   }
 }
@@ -48,6 +48,12 @@
   @apply py-24 md:py-32;
 }
 
+/* Updated container class for wider content */
 .container {
-  @apply px-4 md:px-6;
+  @apply px-4 md:px-6 w-[95%] md:w-[90%] mx-auto;
+}
+
+/* New class for centered narrow content */
+.container-narrow {
+  @apply px-4 md:px-6 w-[95%] md:w-[60%] mx-auto;
 }

@@ -22,7 +22,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="section-spacing bg-secondary/20">
+    <section className="section-spacing bg-black/50">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
