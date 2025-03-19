@@ -22,7 +22,7 @@ export default function Navbar() {
           <div className="rounded-lg bg-black/60 backdrop-blur-lg border border-white/10">
             <div className="flex h-16 items-center justify-between px-6">
               <Link href="/">
-                <a className="text-xl font-semibold tracking-tight hover:text-primary transition-colors">
+                <a className="text-xl font-semibold tracking-tight hover:text-[#5239cc] transition-colors">
                   Aristoteles Bernardo
                 </a>
               </Link>
@@ -32,7 +32,7 @@ export default function Navbar() {
                 {navItems.map((item) => (
                   <Link key={item.href} href={item.href}>
                     <a 
-                      className={`text-sm font-medium transition-colors hover:text-primary
+                      className={`text-sm font-medium transition-colors hover:text-[#5239cc]
                         ${location === item.href ? 'text-foreground' : 'text-muted-foreground'}`}
                     >
                       {item.label}
@@ -41,7 +41,7 @@ export default function Navbar() {
                 ))}
                 <Link href="/contact">
                   <Button 
-                    className="bg-white/90 text-black hover:bg-white rounded-full px-6"
+                    className="bg-white/90 text-black hover:bg-[#5239cc] hover:text-white rounded-full px-6 transition-colors"
                     variant="ghost"
                   >
                     Let's Talk
@@ -52,7 +52,7 @@ export default function Navbar() {
               {/* Mobile Navigation */}
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild className="md:hidden">
-                  <Button variant="ghost" size="icon" className="shrink-0">
+                  <Button variant="ghost" size="icon" className="shrink-0 hover:text-[#5239cc]">
                     <Menu className="h-5 w-5" />
                     <span className="sr-only">Toggle menu</span>
                   </Button>
@@ -62,7 +62,7 @@ export default function Navbar() {
                     {navItems.map((item) => (
                       <Link key={item.href} href={item.href}>
                         <a
-                          className={`block text-base font-medium transition-colors hover:text-primary
+                          className={`block text-base font-medium transition-colors hover:text-[#5239cc]
                             ${location === item.href ? 'text-foreground' : 'text-muted-foreground'}`}
                           onClick={() => setIsOpen(false)}
                         >
@@ -72,7 +72,7 @@ export default function Navbar() {
                     ))}
                     <Link href="/contact">
                       <Button 
-                        className="w-full bg-white/90 text-black hover:bg-white rounded-full mt-4"
+                        className="w-full bg-white/90 text-black hover:bg-[#5239cc] hover:text-white rounded-full mt-4 transition-colors"
                         variant="ghost"
                         onClick={() => setIsOpen(false)}
                       >
