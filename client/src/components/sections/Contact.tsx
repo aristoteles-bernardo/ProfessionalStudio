@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { Github, Instagram, Linkedin, Behance } from "lucide-react";
+import { Github, Instagram, Linkedin } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -32,10 +32,7 @@ export default function Contact() {
               className="text-muted-foreground hover:text-primary transition-colors">
               <Linkedin size={24} />
             </a>
-            <a href="https://behance.net/yourusername" target="_blank" rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors">
-              <Behance size={24} />
-            </a>
+            
           </div>
         </motion.div>
       </div>
