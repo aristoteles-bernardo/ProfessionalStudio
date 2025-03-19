@@ -6,11 +6,11 @@ export default function Contact() {
   return (
     <section className="container py-12 bg-background">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8">
+        <div className="flex items-center justify-center gap-8 mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold">
             Aristoteles
           </h1>
-          <div className="relative aspect-[3/4] bg-black/30 rounded-lg overflow-hidden max-w-md mx-auto mb-8">
+          <div className="relative aspect-[3/4] bg-black/30 rounded-lg overflow-hidden w-64">
             <img
               src="/profile.jpg"
               alt="Profile"
