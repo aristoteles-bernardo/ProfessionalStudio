@@ -1,26 +1,66 @@
-import SkillBadge from "@/components/shared/SkillBadge";
 import { motion } from "framer-motion";
+import {
+  SiPython,
+  SiR,
+  SiJava,
+  SiCplusplus,
+  SiCsharp,
+  SiPowerbi,
+  SiMatlab,
+  SiDjango,
+  SiFlask,
+  SiPlotly,
+  SiApachehadoop,
+  SiMicrosoftazure,
+  SiGooglecloud,
+  SiAmazonaws,
+  SiGit,
+  SiGoogle,
+  SiCisco,
+  SiJupyter,
+  SiGoogleanalytics
+} from "react-icons/si";
 
 const skillCategories = [
   {
     title: "Technical Languages",
-    skills: ["Python", "R", "Java", "C++", "C#", "DAX", "MATLAB"]
+    skills: [
+      { name: "Python", icon: SiPython },
+      { name: "R", icon: SiR },
+      { name: "Java", icon: SiJava },
+      { name: "C++", icon: SiCplusplus },
+      { name: "C#", icon: SiCsharp },
+      { name: "DAX", icon: SiPowerbi },
+      { name: "MATLAB", icon: SiMatlab }
+    ]
   },
   {
     title: "Frameworks",
-    skills: ["Django", "Flask", "Dash", "Kivy", "Apache Hadoop"]
+    skills: [
+      { name: "Django", icon: SiDjango },
+      { name: "Flask", icon: SiFlask },
+      { name: "Dash", icon: SiPlotly },
+      { name: "Kivy", icon: SiPython },
+      { name: "Apache Hadoop", icon: SiApachehadoop }
+    ]
   },
   {
     title: "Cloud & Tools",
-    skills: ["Microsoft Azure", "Google Cloud", "AWS", "Power BI", "Git"]
+    skills: [
+      { name: "Microsoft Azure", icon: SiMicrosoftazure },
+      { name: "Google Cloud", icon: SiGooglecloud },
+      { name: "AWS", icon: SiAmazonaws },
+      { name: "Power BI", icon: SiPowerbi },
+      { name: "Git", icon: SiGit }
+    ]
   },
   {
     title: "Certifications",
     skills: [
-      "Google Project Management",
-      "NSE Network Security",
-      "Data Science Specialization",
-      "Google Analytics"
+      { name: "Google Project Management", icon: SiGoogle },
+      { name: "NSE Network Security", icon: SiCisco },
+      { name: "Data Science Specialization", icon: SiJupyter },
+      { name: "Google Analytics", icon: SiGoogleanalytics }
     ]
   }
 ];
@@ -45,9 +85,12 @@ export default function Skills() {
             className="space-y-4"
           >
             <h3 className="text-xl font-semibold">{category.title}</h3>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-4">
               {category.skills.map((skill) => (
-                <SkillBadge key={skill} skill={skill} />
+                <div key={skill.name} className="flex flex-col items-center gap-2 p-3 bg-card rounded-lg">
+                  <skill.icon className="w-8 h-8" />
+                  <span className="text-sm">{skill.name}</span>
+                </div>
               ))}
             </div>
           </motion.div>
