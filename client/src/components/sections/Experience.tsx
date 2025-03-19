@@ -1,4 +1,5 @@
 import ExperienceTimeline from "@/components/shared/ExperienceTimeline";
+import { motion } from "framer-motion";
 
 const experiences = [
   {
@@ -23,16 +24,24 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section className="container py-12">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-4">Professional Experience</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
-          Track record of success in leading technology initiatives
-        </p>
-      </div>
+    <section className="section-spacing bg-[#0E0E0E]">
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Professional Experience</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+            Track record of success in leading technology initiatives
+          </p>
+        </motion.div>
 
-      <div className="max-w-3xl mx-auto">
-        <ExperienceTimeline experiences={experiences} />
+        <div className="max-w-5xl mx-auto">
+          <ExperienceTimeline experiences={experiences} />
+        </div>
       </div>
     </section>
   );
