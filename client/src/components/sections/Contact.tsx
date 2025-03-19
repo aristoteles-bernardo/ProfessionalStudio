@@ -6,19 +6,42 @@ export default function Contact() {
   return (
     <section className="container py-12 bg-background">
       <div className="max-w-4xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold mb-8">
+            Aristoteles
+          </h1>
+          <div className="relative aspect-[3/4] bg-black/30 rounded-lg overflow-hidden max-w-md mx-auto mb-8">
+            <img
+              src="/profile.jpg"
+              alt="Profile"
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold">
+            Bernardo
+          </h1>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="text-left"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold italic mb-6">
+              A website that leaves a lasting impression!
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-left space-y-6"
           >
-            <h1 className="text-4xl md:text-5xl font-bold">
-              Aristoteles
-              <br />
-              Bernardo
-            </h1>
             <p className="text-muted-foreground text-lg">
               Hi, I'm Aristoteles Bernardo - a technology professional specializing in data analysis, 
               project management, and systems development. I'm passionate about creating impactful 
@@ -39,20 +62,6 @@ export default function Contact() {
                 <Linkedin size={24} />
               </a>
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative aspect-[3/4] bg-black/30 rounded-lg overflow-hidden"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=800&auto=format&fit=crop&q=80"
-              alt="Profile"
-              className="object-cover w-full h-full opacity-80"
-            />
           </motion.div>
         </div>
       </div>
