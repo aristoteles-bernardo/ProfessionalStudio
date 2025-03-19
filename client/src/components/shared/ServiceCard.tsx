@@ -9,10 +9,10 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, icon: Icon }: ServiceCardProps) {
   return (
-    <Card className="h-full transition-colors hover:border-primary/50">
+    <Card className="bg-background border-white/5 hover:border-white/10 transition-colors">
       <CardHeader>
-        <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-          <Icon className="h-6 w-6 text-primary" />
+        <div className="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center mb-4">
+          <Icon className="h-6 w-6 text-white" />
         </div>
         <h3 className="text-xl font-semibold">{title}</h3>
       </CardHeader>
