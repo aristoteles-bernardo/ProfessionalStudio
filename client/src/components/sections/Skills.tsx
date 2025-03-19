@@ -2,24 +2,31 @@ import { motion } from "framer-motion";
 import { 
   SiPython,
   SiR,
-  SiJava,
   SiCplusplus,
-  SiCsharp,
-  SiPowerbi,
-  SiMatlab,
   SiDjango,
   SiFlask,
   SiPlotly,
   SiApache,
-  SiMicrosoftazure,
   SiGooglecloud,
-  SiAws,
   SiGit,
   SiGoogle,
   SiCisco,
   SiJupyter,
-  SiGoogleanalytics
+  SiGoogleanalytics,
+  SiMatrix 
 } from "react-icons/si";
+
+import { FaAws, FaJava } from "react-icons/fa";
+import { DiCssdeck } from "react-icons/di";
+import { VscAzure } from "react-icons/vsc";
+
+const PowerBiIcon = () => (
+  <img 
+    src="https://img.icons8.com/?size=100&id=OIRzuzg7UVe4&format=png&color=FFFFFF" 
+    alt="Power BI" 
+    className="w-8 h-8" 
+  />
+);
 
 const skillCategories = [
   {
@@ -27,11 +34,11 @@ const skillCategories = [
     skills: [
       { name: "Python", icon: SiPython },
       { name: "R", icon: SiR },
-      { name: "Java", icon: SiJava },
+      { name: "Java", icon: FaJava },
       { name: "C++", icon: SiCplusplus },
-      { name: "C#", icon: SiCsharp },
-      { name: "DAX", icon: SiPowerbi },
-      { name: "MATLAB", icon: SiMatlab }
+      { name: "C#", icon: DiCssdeck },
+      { name: "DAX", icon: PowerBiIcon },
+      { name: "MATLAB", icon: SiMatrix }
     ]
   },
   {
@@ -47,10 +54,10 @@ const skillCategories = [
   {
     title: "Cloud & Tools",
     skills: [
-      { name: "Microsoft Azure", icon: SiMicrosoftazure },
+      { name: "Microsoft Azure", icon: VscAzure },
       { name: "Google Cloud", icon: SiGooglecloud },
-      { name: "AWS", icon: SiAws },
-      { name: "Power BI", icon: SiPowerbi },
+      { name: "AWS", icon: FaAws },
+      { name: "Power BI", icon: PowerBiIcon },
       { name: "Git", icon: SiGit }
     ]
   },
