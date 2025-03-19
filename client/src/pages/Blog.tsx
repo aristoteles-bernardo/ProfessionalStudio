@@ -1,43 +1,17 @@
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-
-const blogPosts = [
-  {
-    title: "How to Build a Stunning Website with Framer",
-    description: "A step-by-step guide on creating beautiful websites with Framer Motion",
-    image: "/blog/post1.jpg"
-  },
-  {
-    title: "10 website elements for maximum user engagement",
-    description: "Essential elements that keep visitors coming back",
-    image: "/blog/post2.jpg"
-  },
-  {
-    title: "The importance of content in driving website traffic",
-    description: "Why content strategy matters for your online success",
-    image: "/blog/post3.jpg"
-  },
-  {
-    title: "10 common web development mistakes to avoid",
-    description: "Common pitfalls and how to avoid them in your next project",
-    image: "/blog/post4.jpg"
-  },
-  {
-    title: "Why responsive web design is critical for your business",
-    description: "The impact of mobile-first design on user experience",
-    image: "/blog/post5.jpg"
-  },
-  {
-    title: "The art of SEO writing: How to write content that ranks on Google",
-    description: "Optimize your content with expert tips on writing SEO-friendly content",
-    image: "/blog/post6.jpg"
-  }
-];
+import { ArrowLeft } from "lucide-react";
+import { motion } from "framer-motion";
+import { useQuery } from "@tanstack/react-query";
+import type { BlogPost } from "@shared/schema";
 
 export default function Blog() {
+  const { data: posts = [] } = useQuery<BlogPost[]>({
+    queryKey: ["posts"],
+    queryFn: () => fetch("/api/posts").then(r => r.json())
+  });
+
   return (
     <div className="min-h-screen bg-[#0E0E0E] py-32">
       <div className="container">
@@ -61,12 +35,12 @@ export default function Blog() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => (
+          {posts.map((post) => (
             <motion.div
-              key={index}
+              key={post.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: post.id * 0.1 }}
             >
               <Card className="group bg-black/30 border-white/5 hover:border-[#5239cc]/30 transition-all duration-300">
                 <CardContent className="p-4 space-y-4">

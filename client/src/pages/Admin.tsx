@@ -50,7 +50,10 @@ export default function Admin() {
 
   const deleteMutation = useMutation({
     mutationFn: (id: number) => 
-      fetch(`/api/posts/${id}`, { method: "DELETE" }),
+      fetch(`/api/posts/${id}`, { method: "DELETE" }).then(r => {
+        if (!r.ok) throw new Error('Failed to delete post');
+        return r;
+      }),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["posts"] });
     }
@@ -64,10 +67,11 @@ export default function Admin() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (editingPost) {
-      updateMutation.mutate({ ...formData, id: editingPost.id, createdAt: editingPost.createdAt });
+      updateMutation.mutate({ id: editingPost.id, ...formData, createdAt: editingPost.createdAt });
     } else {
       createMutation.mutate(formData);
     }
+    resetForm();
   };
 
   const handleEdit = (post: BlogPost) => {
