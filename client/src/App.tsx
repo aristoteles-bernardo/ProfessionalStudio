@@ -10,6 +10,7 @@ import Work from "@/pages/Work";
 import About from "@/pages/About";
 import Blog from "@/pages/Blog";
 import ProjectManagement from "@/pages/services/ProjectManagement";
+import DataAnalysis from "@/pages/services/DataAnalysis";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -25,6 +26,7 @@ function Router() {
           <Route path="/blog" component={Blog} />
           <Route path="/contact" component={Contact} />
           <Route path="/services/project-management" component={ProjectManagement} />
+          <Route path="/services/data-analysis" component={DataAnalysis} />
           <Route path="/admin" component={Admin} />
           <Route component={NotFound} />
         </Switch>
