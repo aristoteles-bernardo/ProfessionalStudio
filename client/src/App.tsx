@@ -5,6 +5,9 @@ import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Contact from "@/pages/Contact";
+import Work from "@/pages/Work";
+import About from "@/pages/About";
+import Blog from "@/pages/Blog";
 import ProjectManagement from "@/pages/services/ProjectManagement";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -16,6 +19,9 @@ function Router() {
       <main className="pt-28">
         <Switch>
           <Route path="/" component={Home} />
+          <Route path="/work" component={Work} />
+          <Route path="/about" component={About} />
+          <Route path="/blog" component={Blog} />
           <Route path="/contact" component={Contact} />
           <Route path="/services/project-management" component={ProjectManagement} />
           <Route component={NotFound} />
